@@ -42,7 +42,7 @@ Demo is coming soon.
 ---
 ## RS-Instructions Dataset
 <p align="center">
-  <img width="600" alt="image" src="https://github.com/BigData-KSU/RS-LLaVA/images/RS_instructions_dataset.png">
+  <img width="700" src="images/RS_instructions_dataset.png" alt="RS-Instructions Dataset">
 </p>
 
 The **RS-instructions** dataset is created by combining four captioning and VQA datasets. Specifically, it includes two captioning datasets, [UCM-caption](https://pan.baidu.com/s/1mjPToHq#list/path=%2F) and UAV, as well as two VQA datasets, [RSVQA-LR](https://rsvqa.sylvainlobry.com/), and [RSIVQA-DOTA](https://github.com/spectralpublic/RSIVQA). We have utilized the same training and testing split as the original datasets. As a result, the **RS-instructions** dataset consists of 7,058 samples, with 5,506 samples in the training set and 1,552 samples in the test set.
