@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="100" src="assets/RS_LLaVA_icon.jpeg" alt="RS-LLaVA Icon">
+  <img width="250" src="assets/RS-LLaVA.png" alt="RS-LLaVA">
 </p>
 
 # RS-LLaVA: Large Vision Language Model for Joint Captioning and Question Answering in Remote Sensing Imagery
@@ -96,6 +96,38 @@ Demo is coming soon.
 
 
 ---
+
+
+## Install
+
+1. Clone this repository and navigate to RS-LLaVA folder
+
+```
+git clone https://github.com/BigData-KSU/RS-LLaVA.git
+cd RS-LLaVA
+```
+
+2. Install Package
+
+```
+conda create -n rs-llava python=3.10 -y
+conda activate rs-llava
+pip install --upgrade pip  # enable PEP 660 support
+```
+
+3. Install additional packages
+   
+```
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+pip install transformers==4.35
+pip install einops
+pip inastall SentencePiece
+pip install accelerate
+pip install peft
+```
+
+---
+
 
 ## Acknowledgements
 + [LLaVA](https://github.com/haotian-liu/LLaVA)
