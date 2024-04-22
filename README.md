@@ -67,7 +67,7 @@ RSIVQA-DOTA   | RSIVQA_DOTA_Test.json | 1.20 MB |
 
 ## Training
 
-Training RS-LLaVa is carried out in two stages:
+Training RS-LLaVa is carried out in three stages:
 
 #### Stage 1: Pretraining (Feature alignment) stage:
 Using LAION/CC/SBU BLIP-Caption Concept-balanced 558K dataset, and two RS datasets, [NWPU](https://github.com/HaiyanHuang98/NWPU-Captions) and [RSICD](https://huggingface.co/datasets/arampacha/rsicd). 
@@ -79,7 +79,7 @@ Using LAION/CC/SBU BLIP-Caption Concept-balanced 558K dataset, and two RS datase
 |NWPU-RSICD-Pretrain|16.6 MB|[Link](https://huggingface.co/datasets/LailaMB/RS-Instructions_Dataset/tree/main#:~:text=a%20minute%20ago-,NWPU%2DRSICD%2DPretrain.json,-16.6%20MB)|
 
 
-#### Stage 2: Visual Instruction Tuning
+#### Stage 2: Visual Instruction Tuning:
 To teach the model to follow instructions, we used the proposed [RS-Instructions Dataset](#rs-instructions-dataset) plus LLaVA-Instruct-150K dataset.
 
 | Dataset | Size | Link |
@@ -87,6 +87,8 @@ To teach the model to follow instructions, we used the proposed [RS-Instructions
 |RS-Instructions|91.3 MB|[Link](https://huggingface.co/datasets/LailaMB/RS-Instructions_Dataset/blob/main/NWPU-RSICD-UAV-UCM-LR-DOTA-Intrcution.json)|
 |llava_v1_5_mix665k|1.03 GB|[Link](https://huggingface.co/datasets/liuhaotian/LLaVA-Instruct-150K/blob/main/llava_v1_5_mix665k.json)|
 
+#### Stage 3: Downstram Task Tuning: 
+In this stage, the model is fine-tuned on one of the downstream tasks (e.g., RS image captioning or VQA)
 
 ---
 
