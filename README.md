@@ -7,31 +7,27 @@
 Yakoub Bazi, Laila Bashmal, Mohamad Al rahhal, Riccardo Ricci, Farid Melgani
 
 
-[[Paper](https://)] [[RS-LLaVA Model](https://huggingface.co/LailaMB/RS-llava-v1.5-7b-LoRA)] [[RS-instructions Dataset](https://huggingface.co/datasets/LailaMB/RS-Instructions_Dataset)]
+[[Paper](https://www.mdpi.com/2072-4292/16/9/1477)] [[RS-LLaVA Model](https://huggingface.co/BigData-KSU/RS-llava-v1.5-7b-LoRA)] [[RS-instructions Dataset](https://huggingface.co/datasets/BigData-KSU/RS-instructions-dataset)] [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](notebook/RS_LLaVA_inference.ipynb)
+
 <br>
-
-<p align="center">
-
-Demo:  [![hf_space](https://img.shields.io/badge/🤗-Open%20In%20Spaces-blue.svg)](https://)
-
-Inference: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](notebook/RS_LLaVA_inference.ipynb)
-
-</p>
 
 ## Content 📒
 - [Latest Updates](#latest-updates)
 - [Architecture](#architecture)
 - [RS-Instructions Dataset](#rs-instructions-dataset)
 - [Training](#training)
+- [Install](#install)
+- [Inference](#inference)
 - [Acknowledgements](#acknowledgements)
 - [Citation](#citation)
 
 ---
 
 ## Latest Updates  
-- ⏰ Soon: Demo.
-- 📦 20-Apr-2024: RS-instruction dataset.
-- 📦 17-Apr-2024: Model released! 🚀
+- 📔 23 April 2024: We are excited to announce the publication of the paper [**RS-LLaVA: A Large Vision-Language Model for Joint Captioning and Question Answering in Remote Sensing Imagery**](https://www.mdpi.com/2072-4292/16/9/1477).
+
+- 📦 20-Apr-2024: [**RS-instruction dataset**](https://huggingface.co/datasets/BigData-KSU/RS-instructions-dataset) is released.
+- 📦 17-Apr-2024: [**RS-LLaVA Model**](https://huggingface.co/BigData-KSU/RS-llava-v1.5-7b-LoRA) is released and ready for use ! 🚀
   
 ---
 
@@ -47,21 +43,9 @@ Inference: [![Open In Colab](https://colab.research.google.com/assets/colab-badg
   <img width="700" src="assets/RS_instructions_dataset.png" alt="RS-Instructions Dataset">
 </p>
 
-The **RS-instructions** dataset is created by combining four captioning and VQA datasets. Specifically, it includes two captioning datasets, [UCM-caption](https://pan.baidu.com/s/1mjPToHq#list/path=%2F) and UAV, as well as two VQA datasets, [RSVQA-LR](https://rsvqa.sylvainlobry.com/), and [RSIVQA-DOTA](https://github.com/spectralpublic/RSIVQA). We have utilized the same training and testing split as the original datasets. As a result, the **RS-instructions** dataset consists of 7,058 samples, with 5,506 samples in the training set and 1,552 samples in the test set.
+The **RS-instructions** dataset is created by combining four captioning and VQA datasets. Specifically, it includes two captioning datasets, [UCM-caption](https://pan.baidu.com/s/1mjPToHq#list/path=%2F) and UAV, as well as two VQA datasets, [RSVQA-LR](https://rsvqa.sylvainlobry.com/), and [RSIVQA-DOTA](https://github.com/spectralpublic/RSIVQA). We have utilized the same training and testing split as the original datasets. As a result, the [RS-instructions Dataset](https://huggingface.co/datasets/BigData-KSU/RS-instructions-dataset) consists of 7,058 samples, with 5,506 samples in the training set and 1,552 samples in the test set.
 
 The VQA datasets have been formatted in a conversational format. While the captioning datasets have been transformed into an instruction-answer format using a set of instructions that simply ask for a description of the image, such as "Provide a description of the image" and "What does this image represent?".
-
-
-| Dataset | File | Size |
-| --- | --- | --- |
-UCM-caption| UCM_caption_Train.json | 2.00 MB | 
-UCM-caption| UCM_caption_Test.json | 1.20 MB | 
-UAV        | UAV_Train.json | 1.20 MB | 
-UAV        | UAV_Test.json | 1.20 MB | 
-RSVQA-LR   | RSVQA_LR_Train.json | 1.20 MB | 
-RSVQA-LR   | RSVQA_LR_Test.json | 1.20 MB | 
-RSIVQA-DOTA   | RSIVQA_DOTA_Train.json | 1.20 MB | 
-RSIVQA-DOTA   | RSIVQA_DOTA_Test.json | 1.20 MB | 
 
 ---
 
@@ -76,30 +60,21 @@ Using LAION/CC/SBU BLIP-Caption Concept-balanced 558K dataset, and two RS datase
 | Dataset | Size | Link |
 | --- | --- |--- |
 |CC-3M Concept-balanced 595K|211 MB|[Link](https://github.com/haotian-liu/LLaVA/blob/main/docs/Data.md)|
-|NWPU-RSICD-Pretrain|16.6 MB|[Link](https://huggingface.co/datasets/LailaMB/RS-Instructions_Dataset/tree/main#:~:text=a%20minute%20ago-,NWPU%2DRSICD%2DPretrain.json,-16.6%20MB)|
+|NWPU-RSICD-Pretrain|16.6 MB|[Link](https://huggingface.co/datasets/BigData-KSU/RS-instructions-dataset/blob/main/NWPU-RSICD-pretrain.json)|
 
 
 #### Stage 2: Visual Instruction Tuning:
-To teach the model to follow instructions, we used the proposed [RS-Instructions Dataset](#rs-instructions-dataset) plus LLaVA-Instruct-150K dataset.
+To teach the model to follow instructions, we used the proposed RS-Instructions Dataset plus LLaVA-Instruct-150K dataset.
 
 | Dataset | Size | Link |
 | --- | --- |--- |
-|RS-Instructions|91.3 MB|[Link](https://huggingface.co/datasets/LailaMB/RS-Instructions_Dataset/blob/main/NWPU-RSICD-UAV-UCM-LR-DOTA-Intrcution.json)|
+|RS-Instructions|91.3 MB|[Link](https://huggingface.co/datasets/BigData-KSU/RS-instructions-dataset/blob/main/NWPU-RSICD-UAV-UCM-LR-DOTA-intrcutions.json)|
 |llava_v1_5_mix665k|1.03 GB|[Link](https://huggingface.co/datasets/liuhaotian/LLaVA-Instruct-150K/blob/main/llava_v1_5_mix665k.json)|
 
 #### Stage 3: Downstram Task Tuning: 
 In this stage, the model is fine-tuned on one of the downstream tasks (e.g., RS image captioning or VQA)
 
 ---
-
-## Demo
-
-Demo is coming soon.
-
-
-
----
-
 
 ## Install
 
@@ -146,7 +121,7 @@ from PIL import Image
 import math
 
 ######## model here.................
-model_path = 'LailaMB/RS-llava-v1.5-7b-LoRA'
+model_path = 'BigData-KSU/RS-llava-v1.5-7b-LoRA'
 
 model_base = 'Intel/neural-chat-7b-v3-3'
 
@@ -221,18 +196,30 @@ if __name__ == "__main__":
 
 ```
 
-
 ---
 
 ## Acknowledgements
-+ [LLaVA](https://github.com/haotian-liu/LLaVA)
++ [LLaVA](https://github.com/haotian-liu/LLaVA): an open-sourced model for vision-language assistant.
 
 ---
 
 ## Citation
 
+If you find RS-LLaVa useful in your research or application, please consider citing using the following BibTeX:
+
 ```bibtex
-soon
+@Article{rs16091477,
+AUTHOR = {Bazi, Yakoub and Bashmal, Laila and Al Rahhal, Mohamad Mahmoud and Ricci, Riccardo and Melgani, Farid},
+TITLE = {RS-LLaVA: A Large Vision-Language Model for Joint Captioning and Question Answering in Remote Sensing Imagery},
+JOURNAL = {Remote Sensing},
+VOLUME = {16},
+YEAR = {2024},
+NUMBER = {9},
+ARTICLE-NUMBER = {1477},
+URL = {https://www.mdpi.com/2072-4292/16/9/1477},
+ISSN = {2072-4292},
+DOI = {10.3390/rs16091477}
+}
 
 ```
 ---
