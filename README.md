@@ -1,6 +1,3 @@
-<p align="center">
-  <img width="250" src="assets/RS-LLaVA.png" alt="RS-LLaVA">
-</p>
 
 # RS-LLaVA: Large Vision Language Model for Joint Captioning and Question Answering in Remote Sensing Imagery
 
@@ -34,6 +31,19 @@ Yakoub Bazi, Laila Bashmal, Mohamad Al rahhal, Riccardo Ricci, Farid Melgani
 ## Architecture
 <p align="center">
   <img width="600" src="assets/architecture.png" alt="RS-LLaVA Architectural Overview">
+</p>
+
+---
+## Demo
+<p align="center">
+  <img width="800" src="assets/demo/demo2.png" alt="RS-LLaVA demo">
+  <img width="800" src="assets/demo/demo4.png" alt="RS-LLaVA demo">
+  <img width="800" src="assets/demo/demo5.png" alt="RS-LLaVA demo">
+</p>
+
+<p align="center">
+  <img width="700" src="assets/demo/demo1.png" alt="RS-LLaVA demo">
+  <img width="700" src="assets/demo/demo3.png" alt="RS-LLaVA demo">
 </p>
 
 ---
