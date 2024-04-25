@@ -1,6 +1,3 @@
-<p align="center">
-  <img width="250" src="assets/RS-LLaVA.png" alt="RS-LLaVA">
-</p>
 
 # RS-LLaVA: Large Vision Language Model for Joint Captioning and Question Answering in Remote Sensing Imagery
 
@@ -14,6 +11,7 @@ Yakoub Bazi, Laila Bashmal, Mohamad Al rahhal, Riccardo Ricci, Farid Melgani
 ## Content 📒
 - [Latest Updates](#latest-updates)
 - [Architecture](#architecture)
+- [Demo](#demo)
 - [RS-Instructions Dataset](#rs-instructions-dataset)
 - [Training](#training)
 - [Install](#install)
@@ -37,10 +35,23 @@ Yakoub Bazi, Laila Bashmal, Mohamad Al rahhal, Riccardo Ricci, Farid Melgani
 </p>
 
 ---
+## Demo
+<p align="center">
+  <img width="800" src="assets/demo/demo2.png" alt="RS-LLaVA demo">
+  <img width="800" src="assets/demo/demo4.png" alt="RS-LLaVA demo">
+  <img width="800" src="assets/demo/demo5.png" alt="RS-LLaVA demo">
+</p>
+
+<p align="center">
+  <img width="800" src="assets/demo/demo1.png" alt="RS-LLaVA demo">
+  <img width="800" src="assets/demo/demo3.png" alt="RS-LLaVA demo">
+</p>
+
+---
 
 ## RS-Instructions Dataset
 <p align="center">
-  <img width="700" src="assets/RS_instructions_dataset.png" alt="RS-Instructions Dataset">
+  <img width="800" src="assets/RS_instructions_dataset.png" alt="RS-Instructions Dataset">
 </p>
 
 The **RS-instructions** dataset is created by combining four captioning and VQA datasets. Specifically, it includes two captioning datasets, [UCM-caption](https://pan.baidu.com/s/1mjPToHq#list/path=%2F) and UAV, as well as two VQA datasets, [RSVQA-LR](https://rsvqa.sylvainlobry.com/), and [RSIVQA-DOTA](https://github.com/spectralpublic/RSIVQA). We have utilized the same training and testing split as the original datasets. As a result, the [RS-instructions Dataset](https://huggingface.co/datasets/BigData-KSU/RS-instructions-dataset) consists of 7,058 samples, with 5,506 samples in the training set and 1,552 samples in the test set.
