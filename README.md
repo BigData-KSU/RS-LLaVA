@@ -11,6 +11,7 @@ Yakoub Bazi, Laila Bashmal, Mohamad Al rahhal, Riccardo Ricci, Farid Melgani
 ## Content 📒
 - [Latest Updates](#latest-updates)
 - [Architecture](#architecture)
+- [Demo](#demo)
 - [RS-Instructions Dataset](#rs-instructions-dataset)
 - [Training](#training)
 - [Install](#install)
@@ -42,8 +43,8 @@ Yakoub Bazi, Laila Bashmal, Mohamad Al rahhal, Riccardo Ricci, Farid Melgani
 </p>
 
 <p align="center">
-  <img width="700" src="assets/demo/demo1.png" alt="RS-LLaVA demo">
-  <img width="700" src="assets/demo/demo3.png" alt="RS-LLaVA demo">
+  <img width="800" src="assets/demo/demo1.png" alt="RS-LLaVA demo">
+  <img width="800" src="assets/demo/demo3.png" alt="RS-LLaVA demo">
 </p>
 
 ---
