@@ -1,4 +1,9 @@
 
+<p align="center">
+  <img width="250" src="assets/RS-LLaVA.png" alt="RS-LLaVA Architectural Overview">
+</p>
+
+
 # RS-LLaVA: Large Vision Language Model for Joint Captioning and Question Answering in Remote Sensing Imagery
 
 Yakoub Bazi, Laila Bashmal, Mohamad Al rahhal, Riccardo Ricci, Farid Melgani
@@ -110,9 +115,11 @@ pip install --upgrade pip  # enable PEP 660 support
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
 pip install transformers==4.35
 pip install einops
-pip inastall SentencePiece
+pip install SentencePiece
 pip install accelerate
 pip install peft
+pip install gradio
+
 ```
 
 ---
