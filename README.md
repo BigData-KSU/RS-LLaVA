@@ -6,7 +6,7 @@
 
 # RS-LLaVA: Large Vision Language Model for Joint Captioning and Question Answering in Remote Sensing Imagery
 
-Yakoub Bazi, Laila Bashmal, Mohamad Al rahhal, Riccardo Ricci, Farid Melgani
+Yakoub Bazi, Laila Bashmal, Mohamad Al rahhal, Mansour Zuair, Riccardo Ricci, Farid Melgani
 
 
 [[Paper](https://www.mdpi.com/2072-4292/16/9/1477)] [[RS-LLaVA Model](https://huggingface.co/BigData-KSU/RS-llava-v1.5-7b-LoRA)] [[RS-instructions Dataset](https://huggingface.co/datasets/BigData-KSU/RS-instructions-dataset)] [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](notebook/RS_LLaVA_inference.ipynb)
