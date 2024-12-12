@@ -27,7 +27,7 @@ from ..llava_arch import LlavaMetaModel, LlavaMetaForCausalLM
 
 
 class LlavaConfig(LlamaConfig):
-    model_type = "rs_llava"
+    model_type = "llava_llama"
 
 
 class LlavaLlamaModel(LlavaMetaModel, LlamaModel):
@@ -108,5 +108,5 @@ class LlavaLlamaForCausalLM(LlamaForCausalLM, LlavaMetaForCausalLM):
             _inputs['images'] = images
         return _inputs
 
-AutoConfig.register("rs_llava", LlavaConfig)
+AutoConfig.register("llava_llama", LlavaConfig)
 AutoModelForCausalLM.register(LlavaConfig, LlavaLlamaForCausalLM)

@@ -4,7 +4,7 @@ import base64
 
 import torch
 from transformers import StoppingCriteria
-from rsllava.constants import IMAGE_TOKEN_INDEX
+from llava.constants import IMAGE_TOKEN_INDEX
 
 
 def load_image_from_base64(image):
