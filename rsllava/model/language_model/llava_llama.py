@@ -103,6 +103,7 @@ class LlavaLlamaForCausalLM(LlamaForCausalLM, LlavaMetaForCausalLM):
         _inputs = super().prepare_inputs_for_generation(
             input_ids, past_key_values=past_key_values, inputs_embeds=inputs_embeds, **kwargs
         )
+        _inputs.pop("cache_position")
         if images is not None:
             _inputs['images'] = images
         return _inputs
