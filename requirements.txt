@@ -1,0 +1,7 @@
+transformers==4.35
+einops
+SentencePiece
+accelerate
+peft
+gradio
+Pillow
