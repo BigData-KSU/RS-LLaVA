@@ -97,65 +97,27 @@ In this stage, the model is fine-tuned on one of the downstream tasks (e.g., RS 
 1. Clone this repository and navigate to RS-LLaVA folder:
 
 ```bash
-    git clone [https://github.com/BigData-KSU/RS-LLaVA.git](https://github.com/BigData-KSU/RS-LLaVA.git)
+    git clone https://github.com/BigData-KSU/RS-LLaVA.git
     cd RS-LLaVA
-    ```
+```
 
 2. Create and activate a new conda environment:
 
-```
-conda create -n rs-llava python=3.10 -y
-conda activate rs-llava
-```
-
-
-[... (Keep your existing introduction and links)]
-
-## Content 📖
-- [Latest Updates](#latest-updates)
-- [Architecture](#architecture)
-- [Demo](#demo)
-- [RS-Instructions Dataset](#rs-instructions-dataset)
-- [Installation](#installation)
-- [Usage](#usage)
-  - [Gradio Demo](#gradio-demo)
-  - [Command-Line Inference](#command-line-inference)
-- [Training](#training)
-- [Acknowledgements](#acknowledgements)
-- [Contributing](#contributing)
-- [License](#license)
-- [Citation](#citation)
-
----
-
-[... (Keep Latest Updates, Architecture, Demo, RS-Instructions Dataset sections)]
-
----
-
-## Installation
-
-1.  Clone this repository and navigate to the RS-LLaVA folder:
-    ```bash
-    git clone [https://github.com/BigData-KSU/RS-LLaVA.git](https://github.com/BigData-KSU/RS-LLaVA.git)
-    cd RS-LLaVA
-    ```
-
-2.  Create and activate a new conda environment:
-    ```bash
+  ```
     conda create -n rs-llava python=3.10 -y
     conda activate rs-llava
-    ```
+  ```
+
 
 3.  Install PyTorch:
-    ```bash
-    pip install torch torchvision
-    ```
-
+  ```bash
+      pip install torch torchvision
+  ```
 
 4.  Install dependencies from the `requirements.txt` file:
-    ```bash
-    pip install -r requirements.txt
-    ```
+  ```bash
+      pip install -r requirements.txt
+  ```
 
 ---
 
