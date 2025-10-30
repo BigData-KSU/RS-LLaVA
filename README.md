@@ -97,11 +97,31 @@ In this stage, the model is fine-tuned on one of the downstream tasks (e.g., RS 
 1. Clone this repository and navigate to RS-LLaVA folder:
 
 ```bash
+git clone [https://github.com/BigData-KSU/RS-LLaVA.git](https://github.com/BigData-KSU/RS-LLaVA.git)
+cd RS-LLaVA
     git clone https://github.com/BigData-KSU/RS-LLaVA.git
     cd RS-LLaVA
 ```
 
 2. Create and activate a new conda environment:
+
+```bash
+conda create -n rs-llava python=3.10 -y
+conda activate rs-llava
+
+```
+
+
+3. Install PyTorch
+    ```bash
+    pip install torch torchvision torchaudio 
+
+    ```
+
+4.  Install the remaining dependencies from the `requirements.txt` file:
+    ```bash
+    pip install -r requirements.txt
+    ```
 
   ```
     conda create -n rs-llava python=3.10 -y
@@ -238,5 +258,7 @@ DOI = {10.3390/rs16091477}
 
 ```
 ---
+## License
+This model is released under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/) for research purposes only.
 
 

@@ -27,7 +27,7 @@ from ..llava_arch import LlavaMetaModel, LlavaMetaForCausalLM
 
 
 class LlavaConfig(LlamaConfig):
-    model_type = "llava"
+    model_type = "llava_llama"
 
 
 class LlavaLlamaModel(LlavaMetaModel, LlamaModel):
@@ -103,9 +103,10 @@ class LlavaLlamaForCausalLM(LlamaForCausalLM, LlavaMetaForCausalLM):
         _inputs = super().prepare_inputs_for_generation(
             input_ids, past_key_values=past_key_values, inputs_embeds=inputs_embeds, **kwargs
         )
+        _inputs.pop("cache_position")
         if images is not None:
             _inputs['images'] = images
         return _inputs
 
-AutoConfig.register("llava", LlavaConfig)
+AutoConfig.register("llava_llama", LlavaConfig)
 AutoModelForCausalLM.register(LlavaConfig, LlavaLlamaForCausalLM)
